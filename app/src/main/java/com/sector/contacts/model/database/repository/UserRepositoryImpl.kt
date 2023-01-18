@@ -1,0 +1,29 @@
+package com.sector.contacts.model.database.repository
+
+import com.sector.contacts.di.provider.DatabaseProvider
+import com.sector.contacts.entity.User
+import javax.inject.Inject
+
+class UserRepositoryImpl @Inject constructor(
+    private var databaseProvider: DatabaseProvider
+): UserRepository {
+
+    override suspend fun getUsers(): MutableList<User> =
+        databaseProvider.userDao().getUsers()
+
+    override suspend fun addUser(user: User) {
+        databaseProvider.userDao().addUser(user)
+    }
+
+    override suspend fun updateUser(user: User) {
+        databaseProvider.userDao().updateUser(user)
+    }
+
+    override suspend fun deleteUser(user: User) {
+        databaseProvider.userDao().deleteUser(user)
+    }
+
+    override suspend fun deleteAllUsers() {
+        databaseProvider.userDao().deleteAllUsers()
+    }
+}
