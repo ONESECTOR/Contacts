@@ -57,7 +57,7 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 
     // Coroutines
-    val coroutinesVersion = "1.6.2"
+    val coroutinesVersion = "1.6.4"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactive:$coroutinesVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion")
