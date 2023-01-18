@@ -7,7 +7,7 @@ buildscript {
         val hilt = "2.39.1"
         classpath("com.google.dagger:hilt-android-gradle-plugin:$hilt")
 
-        val safeArgs = "2.4.2"
+        val safeArgs = "2.5.3"
         classpath("androidx.navigation:navigation-safe-args-gradle-plugin:$safeArgs")
     }
 }
