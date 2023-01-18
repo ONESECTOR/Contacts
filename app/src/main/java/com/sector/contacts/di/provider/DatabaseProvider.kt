@@ -15,7 +15,7 @@ import com.sector.contacts.model.database.dao.UserDao
 abstract class DatabaseProvider: RoomDatabase() {
 
     companion object {
-        const val DATABASE_NAME = "usersystem_db"
+        const val DATABASE_NAME = "contacts_db"
     }
 
     abstract fun userDao(): UserDao
