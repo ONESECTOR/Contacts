@@ -14,6 +14,7 @@ import com.sector.contacts.databinding.FragmentHomeBinding
 import com.sector.contacts.entity.User
 import com.sector.contacts.ui.fragments.home.adapter.HomeAdapter
 import com.sector.contacts.ui.fragments.home.viewmodel.HomeViewModel
+import com.sector.contacts.util.navigate
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -38,7 +39,9 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.addNewContact.setOnClickListener {
-
+            navigate(
+                HomeFragmentDirections.onAdd()
+            )
         }
 
         lifecycle.coroutineScope.launch {
@@ -46,6 +49,11 @@ class HomeFragment : Fragment() {
                 createUserItems(it)
             }
         }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
     private fun createUserItems(users: List<User>) {
