@@ -2,13 +2,14 @@ package com.sector.contacts.model.database.repository
 
 import com.sector.contacts.di.provider.DatabaseProvider
 import com.sector.contacts.entity.User
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class UserRepositoryImpl @Inject constructor(
     private var databaseProvider: DatabaseProvider
 ): UserRepository {
 
-    override suspend fun getUsers(): MutableList<User> =
+    override fun getUsers(): Flow<List<User>> =
         databaseProvider.userDao().getUsers()
 
     override suspend fun addUser(user: User) {

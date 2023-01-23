@@ -1,10 +1,11 @@
 package com.sector.contacts.model.database.repository
 
 import com.sector.contacts.entity.User
+import kotlinx.coroutines.flow.Flow
 
 interface UserRepository {
 
-    suspend fun getUsers(): MutableList<User>
+    fun getUsers(): Flow<List<User>>
 
     suspend fun addUser(user: User)
 
