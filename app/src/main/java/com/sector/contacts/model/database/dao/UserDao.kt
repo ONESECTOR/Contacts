@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Update
 import com.sector.contacts.entity.User
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface UserDao {
@@ -15,7 +16,7 @@ interface UserDao {
     suspend  fun addUser(user: User)
 
     @Query("SELECT * FROM users ORDER BY id ASC")
-    fun getUsers(): MutableList<User>
+    fun getUsers(): Flow<List<User>>
 
     @Update
     suspend fun updateUser(user: User)
@@ -24,5 +25,5 @@ interface UserDao {
     suspend fun deleteUser(user: User)
 
     @Query("DELETE FROM users")
-    fun deleteAllUsers()
+    suspend fun deleteAllUsers()
 }
