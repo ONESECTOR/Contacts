@@ -7,7 +7,7 @@ import javax.inject.Inject
 class UserUseCase @Inject constructor(
     private var userRepository: UserRepository
 ) {
-    suspend fun getUsers() = userRepository.getUsers()
+    fun getUsers() = userRepository.getUsers()
 
     suspend fun addUser(user: User) {
         userRepository.addUser(user)
