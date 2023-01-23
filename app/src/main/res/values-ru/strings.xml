@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Common -->
+    <string name="fab_content_description">Add</string>
+
+    <!-- Home -->
+    <string name="home_list_empty_title">Ваш список контактов пуст</string>
+</resources>
