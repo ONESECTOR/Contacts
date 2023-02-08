@@ -3,7 +3,14 @@
     <!-- Common -->
     <string name="app_name" translatable="false">Contacts</string>
     <string name="fab_content_description">Add</string>
+    <string name="name">Name</string>
+    <string name="surname">Surname</string>
 
     <!-- Home -->
     <string name="home_list_empty_title">Your contact list is empty</string>
+
+    <!-- Add -->
+    <string name="add">Add</string>
+    <string name="add_title">Adding a user</string>
+    <string name="add_description">Here you can add a new user</string>
 </resources>

@@ -5,6 +5,8 @@
     <color name="black">#1C1E20</color>
     <color name="black_80">#121212</color>
 
+    <color name="navigation_bar_scrim_light">#63FFFFFF</color>
+
     <color name="gray">#4D4D4D</color>
     <color name="gray_F5">#F5F5F5</color>
     <color name="gray_81">#81878D</color>
@@ -13,8 +15,10 @@
 
     <color name="primary_pink_60">#FDA0CC</color>
     <color name="primary_pink_100">#FF0078</color>
+    <color name="primary_pink_test">#FF0078</color>
 
     <color name="gray_swipe_indicator">#1A000000</color>
 
     <color name="blue">#4C55E4</color>
+    <color name="blue_60">#604C55E4</color>
 </resources>

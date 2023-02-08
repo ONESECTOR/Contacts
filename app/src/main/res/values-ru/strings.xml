@@ -3,7 +3,14 @@
 
     <!-- Common -->
     <string name="fab_content_description">Add</string>
+    <string name="name">Имя</string>
+    <string name="surname">Фамилия</string>
 
     <!-- Home -->
     <string name="home_list_empty_title">Ваш список контактов пуст</string>
+
+    <!-- Add -->
+    <string name="add">Добавить</string>
+    <string name="add_title">Добавление\nпользователя</string>
+    <string name="add_description">Здесь вы можете добавить нового пользователя</string>
 </resources>
