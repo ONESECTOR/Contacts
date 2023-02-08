@@ -14,6 +14,7 @@ import com.sector.contacts.databinding.FragmentHomeBinding
 import com.sector.contacts.entity.User
 import com.sector.contacts.ui.fragments.home.adapter.HomeAdapter
 import com.sector.contacts.ui.fragments.home.viewmodel.HomeViewModel
+import com.sector.contacts.util.addSystemBottomPadding
 import com.sector.contacts.util.navigate
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -37,6 +38,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.nestedScrollView.addSystemBottomPadding()
 
         binding.addNewContact.setOnClickListener {
             navigate(
