@@ -13,4 +13,13 @@
     <string name="add">Add</string>
     <string name="add_title">Adding a user</string>
     <string name="add_description">Here you can add a new user</string>
+
+    <!-- Edit -->
+    <string name="save">Save</string>
+    <string name="edit_title">Editing user</string>
+    <string name="edit_description">Here you can edit user data</string>
+    <string name="delete_user">Delete user</string>
+    <string name="bsheet_delete_user_title">Are you sure you want to delete this record?</string>
+    <string name="bsheet_delete_user_description">It will be impossible to recover deleted record</string>
+    <string name="bsheet_delete_user_button">Yes, delete</string>
 </resources>

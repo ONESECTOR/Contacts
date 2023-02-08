@@ -78,7 +78,9 @@ class HomeFragment : Fragment() {
         binding.rvUsers.adapter = ListDelegationAdapter(
             HomeAdapter(
                 onClick = {
-
+                    navigate(
+                        HomeFragmentDirections.onEdit(it)
+                    )
                 }
             )
         ).apply {

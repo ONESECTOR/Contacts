@@ -13,4 +13,13 @@
     <string name="add">Добавить</string>
     <string name="add_title">Добавление\nпользователя</string>
     <string name="add_description">Здесь вы можете добавить нового пользователя</string>
+
+    <!-- Edit -->
+    <string name="save">Сохранить</string>
+    <string name="edit_title">Изменение пользователя</string>
+    <string name="edit_description">Здесь вы можете изменить информацию о пользователе</string>
+    <string name="delete_user">Удалить пользователя</string>
+    <string name="bsheet_delete_user_title">Вы уверены, что хотите удалить эту запись?</string>
+    <string name="bsheet_delete_user_description">Восстановить удаленную запись будет невозможно</string>
+    <string name="bsheet_delete_user_button">Да, удалить</string>
 </resources>

@@ -9,7 +9,7 @@ import com.sector.contacts.ui.custom.BaseViewHolder
 import com.sector.contacts.util.binding
 
 class HomeAdapter(
-    private val onClick: () -> Unit
+    private val onClick: (user: User) -> Unit
 ): AdapterDelegate<MutableList<Any>>() {
 
     override fun isForViewType(items: MutableList<Any>, position: Int): Boolean =
@@ -37,7 +37,9 @@ class HomeAdapter(
             binding.tvFullName.text = "${item.name} ${item.surname}"
 
             itemView.setOnClickListener {
-                onClick.invoke()
+                onClick.invoke(
+                    User(id = item.id, name = item.name, surname = item.surname)
+                )
             }
         }
     }

@@ -12,10 +12,22 @@
         <action
             android:id="@+id/onAdd"
             app:destination="@id/addUserFragment" />
+        <action
+            android:id="@+id/onEdit"
+            app:destination="@id/editUserFragment" />
     </fragment>
     <fragment
         android:id="@+id/addUserFragment"
         android:name="com.sector.contacts.ui.fragments.add.AddUserFragment"
         android:label="fragment_add_user"
         tools:layout="@layout/fragment_add_user" />
+    <fragment
+        android:id="@+id/editUserFragment"
+        android:name="com.sector.contacts.ui.fragments.edit.EditUserFragment"
+        android:label="fragment_edit_user"
+        tools:layout="@layout/fragment_edit_user" >
+        <argument
+            android:name="user"
+            app:argType="com.sector.contacts.entity.User" />
+    </fragment>
 </navigation>
