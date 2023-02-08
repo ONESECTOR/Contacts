@@ -15,6 +15,7 @@ import com.sector.contacts.entity.User
 import com.sector.contacts.ui.fragments.home.adapter.HomeAdapter
 import com.sector.contacts.ui.fragments.home.viewmodel.HomeViewModel
 import com.sector.contacts.util.addSystemBottomPadding
+import com.sector.contacts.util.launchAndRepeatWithViewLifecycle
 import com.sector.contacts.util.navigate
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -47,9 +48,11 @@ class HomeFragment : Fragment() {
             )
         }
 
-        lifecycle.coroutineScope.launch {
-            viewModel.getAllUsers().collect {
-                createUserItems(it)
+        launchAndRepeatWithViewLifecycle {
+            launch {
+                viewModel.getAllUsers().collect {
+                    createUserItems(it)
+                }
             }
         }
     }
